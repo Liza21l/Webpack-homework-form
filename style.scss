@@ -1,0 +1,73 @@
+body{
+    background: url(./pexels-eberhard-grossgasteiger-2098428.jpg);
+    background-size: cover;
+    width: 100%;
+}
+.reagisterBlock{
+    margin-left: 420px;
+    margin-top: 69px;
+    width: 569px;
+    height: 507px;
+    background: rgba(255, 255, 255, 0.345);
+    border-radius: 30px;
+    &_title{
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        padding-top: 30px;
+        &_userName{
+            font-size: 15px;
+            margin-left: 62px;
+            margin-top: 53px;
+            color: #FFFFFF; 
+            &_inputName{
+                margin-left: 62px;
+                width: 297px;
+                height: 35px;
+                border: none;
+                background: #FFFFFF;
+                border-radius: 8px;
+                &_email{
+                    font-size: 15px;
+                    margin-left: 62px;
+                    margin-top: 38px;
+                    color: #FFFFFF;
+                    &_inputEmail{
+                        margin-left: 62px;
+                        width: 297px;
+                        height: 35px;
+                        border: none;
+                        background: #FFFFFF;
+                        border-radius: 8px; 
+                    }
+                }
+            }
+        }
+    }
+    .password{
+        font-size: 15px;
+        margin-left: 62px;
+        margin-top: 38px;
+        color: #FFFFFF;
+        &_inputPassword{
+            margin-left: 62px;
+            width: 297px;
+            height: 35px;
+            border: none;
+            background: #FFFFFF;
+            border-radius: 8px; 
+        }
+    }
+    .btnClean{
+        cursor: pointer;
+        position: absolute;
+        margin-top: 70px;
+        margin-left: -180px;
+        width: 200px;
+        height: 44px;
+        border: none;
+        background: #4B5D6C;
+        border-radius: 10px;
+        color: white;
+    }
+}
