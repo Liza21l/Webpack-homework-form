@@ -1,5 +1,4 @@
-import axios from "axios";
-import randomstring from "randomstring"
+
 import "./style.scss"
 import requestFunk from './script'
 

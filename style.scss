@@ -27,12 +27,12 @@ body{
                 border: none;
                 background: #FFFFFF;
                 border-radius: 8px;
-                &_email{
+                &_login{
                     font-size: 15px;
                     margin-left: 62px;
                     margin-top: 38px;
                     color: #FFFFFF;
-                    &_inputEmail{
+                    &_inputLogin{
                         margin-left: 62px;
                         width: 297px;
                         height: 35px;
@@ -58,7 +58,7 @@ body{
             border-radius: 8px; 
         }
     }
-    .btnClean{
+    .btnConfirm{
         cursor: pointer;
         position: absolute;
         margin-top: 70px;

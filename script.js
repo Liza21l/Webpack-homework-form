@@ -1,28 +1,28 @@
-const form = { 
-    name: document.querySelector('input[form-name]'),
-    email: document.querySelector('input[form-email]'),
-    btnClean: document.querySelector('button[form-btn]')
-}
+import user from "./User"
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-let dataForm 
-if (localStorage.getItem('form')){
-    dataForm = JSON.parse(localStorage.getItem('form'))
-    if (dataForm.name) { 
-        form.name.value = dataForm.name
+const addFunctional = () => {
+    const form = { 
+        login: document.querySelector('#form-login'),
+        password: document.querySelector('#form-password'),
+        btn: document.querySelector('#form-btn')
     }
-} else { 
-    dataForm = {}
+    form.btn.addEventListener('click', () => { 
+        if (form.login.value.length == 0 || form.password.value.length == 0){
+                Notify.warning('Please enter login or password')
+            } else { 
+                if (form.login.value == user.login){ 
+                    if(form.password.value == user.password){
+                        Notify.success(`Welcome, ${user.name}!`)
+                        setTimeout(successAuth(), 2000)
+                    } else  {
+                        Notify.failure(`Password is incorrect`)
+                    }
+                } else { 
+                    Notify.failure(`Login is incorrect`)
+                }
+            }
+    })
 }
 
-form.name.addEventListener('input', () => {
-   dataForm = { 
-    ...dataForm,
-    name: form.name.value
-   }
-   localStorage.setItem('form', JSON.stringify(dataForm))
-})
-
-form.btnClean.addEventListener('click', () => {
-    localStorage.removeItem('form')
-    location.reload()
-})
+export default addFunctional
